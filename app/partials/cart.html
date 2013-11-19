@@ -1,0 +1,25 @@
+<h2>Votre panier</h2>
+
+
+<table id="cart">
+    <tr>
+        <th class="item" colspan="2">Article</th>
+        <th class="price">Prix</th>
+        <th class="qty">Quantité</th>
+        <th class="total">Total</th>
+    </tr>
+    <tr class="game" ng-repeat="row in cart.rows">
+        <td class="img"><a href="#/game/{{row.game.ref}}"><img ng-src="img/{{row.game.ref}}.jpg"/></a></td>
+        <td class="item"><a href="#/game/{{row.game.ref}}">{{row.game.name}}</a></td>
+        <td class="price">{{row.game.price | number:2}} €</td>
+        <td class="qty"><input class="qty" ng-model="row.qty"/></td>
+        <td class="total">{{row.game.price * row.qty | number:2}} €</td>
+    </tr>
+    <tr ng-show="cart.empty()">
+        <td colspan="5" class="vide">Votre panier est vide</td>
+    </tr>
+</table>
+
+<div class="totalHT">Total HT : {{cart.totalHT() | number:2}} €</div>
+<div class="totalTTC">Total TTC de votre commande : {{cart.total() | number:2}} €</div>
+
