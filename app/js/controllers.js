@@ -15,7 +15,3 @@ angular.module('gamestore.controllers', ['gamestore.services'])
             $scope.game = data;
         });
     })
-
-    .controller('CartCtrl', function ($scope, cart) {
-        $scope.cart = cart;
-    })
