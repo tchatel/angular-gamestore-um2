@@ -9,6 +9,22 @@ angular.module('gamestore.services', [])
     .value('tva', 19.6)
 
     .factory('cart', function (tva, notification) {
+        function Row(game) {
+            this.game = game;
+            this.qty = 1;
+        }
+        Row.prototype.label = function () {
+            return this.game.name;
+        };
+        Row.prototype.ref = function () {
+            return this.game.ref;
+        };
+        Row.prototype.unitPrice = function () {
+            return this.game.price;
+        };
+        Row.prototype.totalPrice = function () {
+            return this.qty * this.game.price;
+        };
         return {
             rows: {},
             add: function (game) {
@@ -16,24 +32,21 @@ angular.module('gamestore.services', [])
                 if (row) {
                     row.qty++;
                 } else {
-                    this.rows[game.ref] = {
-                        game: game,
-                        qty: 1
-                    };
+                    this.rows[game.ref] = new Row(game);
                 }
                 notification.add("Article ajouté : " + game.name, null, 3);
             },
             remove: function (row) {
                 var self = this;
-                delete self.rows[row.game.ref];
-                notification.add("Article supprimé : " + row.game.name + ". ", function () {
-                    self.rows[row.game.ref] = row;
+                delete self.rows[row.ref()];
+                notification.add("Article supprimé : " + row.label() + ". ", function () {
+                    self.rows[row.ref()] = row;
                 }, 6);
             },
             total: function () {
                 var sum = 0;
                 for (var i in this.rows) {
-                    sum += this.rows[i].qty * this.rows[i].game.price;
+                    sum += this.rows[i].totalPrice();
                 }
                 return sum;
             },
