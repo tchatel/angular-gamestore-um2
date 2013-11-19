@@ -2,7 +2,6 @@
 
 /* Services */
 
-angular.module('gamestore.services', [])
+angular.module('gamestore.services', []);
 
-    .value('search', {})
 

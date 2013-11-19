@@ -1,12 +1,12 @@
 
 <p>
-    Recherche : <input ng-model="search.text"/>
-    Prix min.: <input ng-model="search.price.min"/>
-    Prix max.: <input ng-model="search.price.max"/>
+    Recherche : <input ng-model="text"/>
+    Prix min.: <input ng-model="price.min"/>
+    Prix max.: <input ng-model="price.max"/>
 </p>
 
 <ul id="catalog">
-    <li ng-repeat="game in catalog | filter:search.text | interval:'price':search.price.min:search.price.max ">
+    <li ng-repeat="game in catalog | filter:text | interval:'price':price.min:price.max ">
         <div class="header">
             <h3>{{game.name}}</h3>
             <a href="#/game/{{game.ref}}"><img ng-src="data/img/{{game.ref}}.jpg"/></a>
