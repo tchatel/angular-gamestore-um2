@@ -11,7 +11,8 @@ angular.module('gamestore.controllers', ['gamestore.services'])
         }
     })
 
-    .controller('CatalogCtrl', function ($scope, $http) {
+    .controller('CatalogCtrl', function ($scope, $http, search) {
+        $scope.search = search;
         $http.get("data/catalog.json").success(function (data) {
             $scope.catalog = data;
         });

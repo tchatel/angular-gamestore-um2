@@ -4,6 +4,8 @@
 
 angular.module('gamestore.services', [])
 
+    .value('search', {})
+
     .value('tva', 19.6)
 
     .factory('cart', function (tva) {
