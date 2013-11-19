@@ -1,10 +1,6 @@
 
-<p>
-    Recherche : <input ng-model="text"/>
-</p>
-
 <ul id="catalog">
-    <li ng-repeat="game in catalog | filter:text">
+    <li ng-repeat="game in catalog">
         <div class="header">
             <h3>{{game.name}}</h3>
             <a href="#/game/{{game.ref}}"><img ng-src="data/img/{{game.ref}}.jpg"/></a>
@@ -15,7 +11,7 @@
         </div>
         <div class="footer">
             <span class="price">{{game.price | currency}}</span>
-            <button class="add" ng-click="addCart(game)">Ajouter au panier</button>
+            <button class="add">Ajouter au panier</button>
         </div>
     </li>
 </ul>
