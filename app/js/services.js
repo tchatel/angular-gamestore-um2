@@ -8,7 +8,7 @@ angular.module('gamestore.services', [])
 
     .value('tva', 19.6)
 
-    .factory('cart', function (tva, notification) {
+    .factory('cart', function (tva) {
         return {
             rows: {},
             add: function (game) {
@@ -21,14 +21,9 @@ angular.module('gamestore.services', [])
                         qty: 1
                     };
                 }
-                notification.add("Article ajouté : " + game.name, null, 3);
             },
             remove: function (row) {
-                var self = this;
-                delete self.rows[row.game.ref];
-                notification.add("Article supprimé : " + row.game.name + ". ", function () {
-                    self.rows[row.game.ref] = row;
-                }, 6);
+                delete this.rows[row.game.ref];
             },
             total: function () {
                 var sum = 0;
