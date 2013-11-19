@@ -6,14 +6,6 @@ angular.module('notif', [])
         $scope.notifications = notification.list;
     })
 
-    .directive('notifications', function () {
-        return {
-            restrict: 'EA',
-            templateUrl: 'partials/notif.html',
-            replace: true
-        }
-    })
-
     .factory('notification', function ($timeout) {
         var service = {
             list: {},
