@@ -14,7 +14,23 @@
   </ul>
 
   <div id="content">
-      <div ng-view></div>
+
+      <ul id="catalog" ng-controller="CatalogCtrl">
+          <li ng-repeat="game in catalog">
+              <div class="header">
+                  <h3>{{game.name}}</h3>
+                  <a href="#/game/{{game.ref}}"><img ng-src="data/img/{{game.ref}}.jpg"/></a>
+              </div>
+              <div class="text">
+                  <p class="designer">Auteur : {{game.designer}}</p>
+                  <p class="intro">{{game.intro}}</p>
+              </div>
+              <div class="footer">
+                  <span class="price">{{game.price | currency}}</span>
+                  <button class="add">Ajouter au panier</button>
+              </div>
+          </li>
+      </ul>
 
       <p id="content-bottom"></p>
   </div>

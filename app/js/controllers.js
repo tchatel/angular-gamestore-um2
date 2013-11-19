@@ -9,13 +9,3 @@ angular.module('gamestore.controllers', ['gamestore.services'])
             $scope.catalog = data;
         });
     })
-
-    .controller('GameCtrl', function ($scope, $routeParams, $http) {
-        $http.get("data/" + $routeParams.ref + ".json").success(function (data) {
-            $scope.game = data;
-        });
-    })
-
-    .controller('CartCtrl', function ($scope, cart) {
-        $scope.cart = cart;
-    })
