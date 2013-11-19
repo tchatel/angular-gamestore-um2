@@ -8,7 +8,7 @@ angular.module('gamestore.services', [])
 
     .value('tva', 19.6)
 
-    .factory('cart', function (tva, notification) {
+    .factory('cart', function (tva) {
         function Row(game) {
             this.game = game;
             this.qty = 1;
