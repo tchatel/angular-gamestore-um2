@@ -1,4 +1,4 @@
-<div id="game">
+<div id="game" ng-if="game">
 
     <img id="box" ng-src="img/{{game.ref}}.jpg"/>
 
@@ -7,10 +7,10 @@
 
         <p class="designer">Auteur : {{game.designer}}</p>
         <p class="intro">{{game.intro}}</p>
-        <p class="desc" ng-bind-html-unsafe="game.desc"></p>
+        <p class="desc" ng-bind-html="game.desc"></p>
     </div>
     <div id="footer">
-        <span class="price">{{game.price | number:2}} €</span>
+        <span class="price">{{game.price | currency}}</span>
         <button class="add" ng-click="addCart(game)">Ajouter au panier</button>
     </div>
     <div id="images">

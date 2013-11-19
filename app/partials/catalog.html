@@ -14,7 +14,7 @@
             <p class="intro">{{game.intro}}</p>
         </div>
         <div class="footer">
-            <span class="price">{{game.price | number:2}} €</span>
+            <span class="price">{{game.price | currency}}</span>
             <button class="add" ng-click="addCart(game)">Ajouter au panier</button>
         </div>
     </li>
