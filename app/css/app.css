@@ -1,5 +1,6 @@
 
 body {
+    position: relative;
     background-color: #2d301b;
     width: 840px;
     margin: 10px auto 10px auto;
@@ -64,6 +65,41 @@ ul#menu li a {
     text-decoration: none;
     color: #fff;
 }
+
+/* ------------------------------- Notifications ------------------------------------------------------------------------*/
+
+#notifications {
+    position: absolute;
+    top: 70px;
+    right: 50px;
+}
+#notifications ul {
+}
+#notifications ul li {
+    width: 320px;
+    margin: 0;
+    padding: 3px 10px 3px 10px;
+    color: black;
+    background-color: #FBFCC7;
+    border: solid 1px #777;
+    border-top: none;
+    list-style-type: none;
+    box-shadow: -1px 2px 5px 1px rgba(0, 0, 0, 0.7);
+}
+#notifications ul li a {
+    float: right;
+    padding-left: 5px;
+}
+#notifications ul li:first-child {
+    border-top: solid 1px #777;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+#notifications ul li:last-child {
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
 
 /* ------------------------------- Catalog ------------------------------------------------------------------------*/
 ul#catalog {

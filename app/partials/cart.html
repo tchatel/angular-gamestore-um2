@@ -7,16 +7,18 @@
         <th class="price">Prix</th>
         <th class="qty">Quantité</th>
         <th class="total">Total</th>
+        <th class="remove"><img src="img/trash.png"/></th>
     </tr>
     <tr class="game" ng-repeat="row in cart.rows">
-        <td class="img"><a href="#/game/{{row.game.ref}}"><img ng-src="img/{{row.game.ref}}.jpg"/></a></td>
+        <td class="img"><a href="#/game/{{row.game.ref}}"><img ng-src="data/img/{{row.game.ref}}.jpg"/></a></td>
         <td class="item"><a href="#/game/{{row.game.ref}}">{{row.game.name}}</a></td>
         <td class="price">{{row.game.price | currency}}</td>
         <td class="qty"><input class="qty" ng-model="row.qty"/></td>
         <td class="total">{{row.game.price * row.qty | currency}}</td>
+        <td class="remove"><a ng-click="cart.remove(row)" href=""><img src="img/delete.png"/></a></td>
     </tr>
     <tr ng-show="cart.empty()">
-        <td colspan="5" class="vide">Votre panier est vide</td>
+        <td colspan="6" class="vide">Votre panier est vide</td>
     </tr>
 </table>
 

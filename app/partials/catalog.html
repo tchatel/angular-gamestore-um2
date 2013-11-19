@@ -9,7 +9,7 @@
     <li ng-repeat="game in catalog | filter:search.text | interval:'price':search.price.min:search.price.max ">
         <div class="header">
             <h3>{{game.name}}</h3>
-            <a href="#/game/{{game.ref}}"><img ng-src="img/{{game.ref}}.jpg"/></a>
+            <a href="#/game/{{game.ref}}"><img ng-src="data/img/{{game.ref}}.jpg"/></a>
         </div>
         <div class="text">
             <p class="designer">Auteur : {{game.designer}}</p>

@@ -4,6 +4,7 @@
         "name": "Race for the Galaxy",
         "designer": "Thomas Lehmann",
         "intro": "Votre objectif : construire l'empire spatial le plus puissant et prospère de tous les temps !",
+        "rating": 2,
         "price": 24.99
     },
 
@@ -12,6 +13,7 @@
         "name": "Le Trône de Fer",
         "designer": "Christian T. Petersen",
         "intro": "La lutte pour le Trône de Fer entre les grandes maisons de Westeros",
+        "rating": 3,
         "price": 48.90
     },
 
@@ -20,6 +22,7 @@
         "name": "Twilight Struggle",
         "designer": "Jason Matthews, Ananda Gupta",
         "intro": "Les luttes de pouvoir entre les deux grandes puissances en 45 ans de Guerre Froide.",
+        "rating": 5,
         "price": 49.90
     },
 
@@ -29,6 +32,7 @@
         "name": "High Frontier",
         "designer": "Phil Eklund",
         "intro": "L'aventure de l'espace, direction les planètes et astéroides du système solaire",
+        "rating": 5,
         "price": 43.50
     },
 
@@ -37,6 +41,7 @@
         "name": "Antiquity",
         "designer": "Jeroen Doumen, Joris Wiersinga",
         "intro": "Développez votre civilisation à l'ère antique et choisissez votre objectif pour la victoire.",
+        "rating": 4,
         "price": 77.90
     },
 
@@ -45,6 +50,7 @@
         "name": "Brass",
         "designer": "Martin Wallace",
         "intro": "Soyez au cœur de la révolution industrielle dans l'Angleterre du XVIIIème siècle.",
+        "rating": 4,
         "price": 35.60
     },
 
@@ -53,6 +59,7 @@
         "name": "A Few Acres of Snow",
         "designer": "Martin Wallace",
         "intro": "La guerre anglo-française pour la conquête du Canada.",
+        "rating": 3,
         "price": 31.90
     },
 
@@ -61,6 +68,7 @@
         "name": "Tigre et Euphrate",
         "designer": "Reiner Knizia",
         "intro": "Installez vos chefs à la tête des différents royaumes de Mésopotamie.",
+        "rating": 5,
         "price": 42.00
     },
 
@@ -69,6 +77,7 @@
         "name": "De Vulgari Eloquentia",
         "designer": "Mario Papini",
         "intro": "L'histoire de la naissance de la langue italienne, à la fin du Moyen-Âge",
+        "rating": 4,
         "price": 34.90
     },
 
@@ -77,6 +86,7 @@
         "name": "Wilderness War",
         "designer": "Volko Ruhnke",
         "intro": "Une simulation de la guerre entre les français et les anglais aux amériques de 1755 à 1760.",
+        "rating": 2,
         "price": 48.00
     },
 
@@ -85,6 +95,7 @@
         "name": "Washington's War",
         "designer": "Mark Herman",
         "intro": "La guerre d'indépendance américaine",
+        "rating": 3,
         "price": 48.00
     },
 
@@ -93,6 +104,7 @@
         "name": "Indonesia",
         "designer": "Jeroen Doumen, Joris Wiersinga",
         "intro": "Un jeu économique sur le développement industriel en Indonésie",
+        "rating": 3,
         "price": 64.90
     }
 

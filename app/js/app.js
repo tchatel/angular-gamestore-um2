@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('gamestore', ['ngRoute', 'ngSanitize',
+angular.module('gamestore', ['ngRoute', 'ngSanitize', 'notif',
                              'gamestore.controllers', 'gamestore.services',
                              'gamestore.filters', 'gamestore.directives'])
 
