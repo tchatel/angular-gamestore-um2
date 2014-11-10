@@ -1,1 +1,3 @@
-# Sample AngularJS application : Game Store
+# Exemple d'application AngularJS : Game Store (v2)
+
+
