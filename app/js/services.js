@@ -6,7 +6,7 @@ angular.module('gamestore.services', [])
 
     .value('search', {})
 
-    .value('tva', 19.6)
+    .value('tva', 1.20)
 
     .factory('cart', function (tva, notification) {
         function Row(game) {
@@ -43,15 +43,15 @@ angular.module('gamestore.services', [])
                     self.rows[row.ref()] = row;
                 }, 6);
             },
-            total: function () {
+            totalWithTax: function () {
                 var sum = 0;
                 for (var i in this.rows) {
                     sum += this.rows[i].totalPrice();
                 }
                 return sum;
             },
-            totalHT: function () {
-                return this.total() * 100 / (100 + tva);
+            totalWithoutTax: function () {
+                return this.totalWithTax() / tva;
             },
             empty: function () {
                 return Object.keys(this.rows).length == 0;
