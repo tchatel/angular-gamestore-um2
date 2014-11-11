@@ -22,6 +22,6 @@
     </tr>
 </table>
 
-<div class="totalHT">Total HT : {{cart.totalHT() | currency}}</div>
-<div class="totalTTC">Total TTC de votre commande : {{cart.total() | currency}}</div>
+<div class="totalHT">Total HT : {{cart.totalWithoutTax() | currency}}</div>
+<div class="totalTTC">Total TTC de votre commande : {{cart.totalWithTax() | currency}}</div>
 
